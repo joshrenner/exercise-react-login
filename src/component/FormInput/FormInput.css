@@ -1,11 +1,16 @@
+/* autoprefixer grid: autoplace */
 .FormInput {
+    --color-error: red;
+    --color-success: green;
+    --color-text: #00475c;
+
     margin: .5rem 0;
 }
 
 .FormInput-body {
     display: flex;
     align-items: center;
-    color: #00475c;
+    color: var(--color-text);
 }
 
 .FormInput-label {
@@ -23,33 +28,39 @@
 
 .FormInput-validation {
     margin-right: .5rem;
-    opacity: 0;
-    transition: all 0.15s ease-out;
-}
-.FormInput-validation.error {
-    color: red;
-    opacity: 1;
-    transition: all 0.15s ease-in;
-}
-.FormInput-validation.success {
-    color: green;
-    opacity: 1;
-    transition: all 0.15s ease-in;
+    transition-property: opacity;
+    transition-duration: .2s;
+    &:not(.error, .success) {
+        opacity: 0;
+        transition-timing-function: ease-out;
+    }
+    &:is(.error, .success) {
+        opacity: 1;
+        transition-timing-function: ease-in;
+    }
+    &.error {
+        color: var(--color-error);
+    }
+    &.success {
+        color: var(--color-success);
+    }
 }
 
 .FormInput-hint {
     font-size: .9em;
-    color: red;
+    color: var(--color-error);
     padding-left: 1em;
     text-indent: -1em;
     max-height: 0;
-    transition: max-height 0.15s ease-out;
     overflow: hidden;
-}
-.FormInput-hint.visible {
-    transform: scaleY(1);
-    max-height: 500px;
-    transition: max-height 0.25s ease-in;
+    transition-property: max-height;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+    &.visible {
+        transform: scaleY(1);
+        max-height: 500px;
+        transition-timing-function: ease-in;
+    }
 }
 
 .FormInput-maskToggle {

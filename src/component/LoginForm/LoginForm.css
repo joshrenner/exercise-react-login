@@ -1,11 +1,13 @@
+/* autoprefixer grid: autoplace */
 .LoginForm {
+    --color-background: #d5eaf0;
+    --color-border: #fff;
+
     width: 27rem;
     padding: 1rem 1.5rem;
-    background: #d5eaf0;
-    border: 1px solid #ffffff;
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
     border-radius: .25rem;
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.25);
-    -moz-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.25);
     box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.25);
 }
 
@@ -16,9 +18,8 @@
 .LoginForm-action {
     display: flex;
     justify-content: flex-end;
-}
-
-.LoginForm-action button {
-    padding: .5rem .8rem;
-    font-size: 1rem;
+    button {
+        padding: .5rem .8rem;
+        font-size: 1rem;
+    }
 }
