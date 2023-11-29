@@ -1,12 +1,9 @@
-
 /* autoprefixer grid: autoplace */
-:root {
+.FormInput {
     --color-error: red;
     --color-success: green;
     --color-text: #00475c;
-}
 
-.FormInput {
     margin: .5rem 0;
 }
 
