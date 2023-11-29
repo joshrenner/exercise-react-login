@@ -1,3 +1,10 @@
+
+:root {
+    --color-error: red;
+    --color-success: green;
+    --color-text: #00475c;
+}
+
 .FormInput {
     margin: .5rem 0;
 }
@@ -5,7 +12,7 @@
 .FormInput-body {
     display: flex;
     align-items: center;
-    color: #00475c;
+    color: var(--color-text);
 }
 
 .FormInput-label {
@@ -25,30 +32,32 @@
     margin-right: .5rem;
     opacity: 0;
     transition: all 0.15s ease-out;
-    &.error {
-        color: red;
+    &:is(.error, .success) {
         opacity: 1;
         transition: all 0.15s ease-in;
     }
+    &.error {
+        color: var(--color-error);
+    }
     &.success {
-        color: green;
-        opacity: 1;
-        transition: all 0.15s ease-in;
+        color: var(--color-success);
     }
 }
 
 .FormInput-hint {
     font-size: .9em;
-    color: red;
+    color: var(--color-error);
     padding-left: 1em;
     text-indent: -1em;
     max-height: 0;
-    transition: max-height 0.15s ease-out;
     overflow: hidden;
+    transition-property: max-height;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
     &.visible {
         transform: scaleY(1);
         max-height: 500px;
-        transition: max-height 0.25s ease-in;
+        transition-timing-function: ease-in;
     }
 }
 
