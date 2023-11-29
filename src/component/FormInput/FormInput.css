@@ -31,11 +31,15 @@
 
 .FormInput-validation {
     margin-right: .5rem;
-    opacity: 0;
-    transition: all 0.15s ease-out;
+    transition-property: opacity;
+    transition-duration: .2s;
+    &:not(.error, .success) {
+        opacity: 0;
+        transition-timing-function: ease-out;
+    }
     &:is(.error, .success) {
         opacity: 1;
-        transition: all 0.15s ease-in;
+        transition-timing-function: ease-in;
     }
     &.error {
         color: var(--color-error);
