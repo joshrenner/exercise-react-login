@@ -2,9 +2,7 @@
 :root {
     --color-background: #d5eaf0;
     --color-border: #fff;
-}
 
-.LoginForm {
     width: 27rem;
     padding: 1rem 1.5rem;
     background: var(--color-background);
