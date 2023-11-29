@@ -16,9 +16,8 @@
 .LoginForm-action {
     display: flex;
     justify-content: flex-end;
-}
-
-.LoginForm-action button {
-    padding: .5rem .8rem;
-    font-size: 1rem;
+    button {
+        padding: .5rem .8rem;
+        font-size: 1rem;
+    }
 }
