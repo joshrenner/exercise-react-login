@@ -3,26 +3,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background: linear-gradient(230deg, #c9e7f0, #79d6f2, #9dc1f3);
-    background-size: 600% 600%;
-    -webkit-animation: ScrollingBackground 29s ease infinite;
-    -moz-animation: ScrollingBackground 29s ease infinite;
-    animation: ScrollingBackground 29s ease infinite;
-}
-
-@-webkit-keyframes ScrollingBackground {
-    0%{background-position:0% 99%}
-    50%{background-position:100% 2%}
-    100%{background-position:0% 99%}
-}
-@-moz-keyframes ScrollingBackground {
-    0%{background-position:0% 99%}
-    50%{background-position:100% 2%}
-    100%{background-position:0% 99%}
-}
-@keyframes ScrollingBackground {
-    0%{background-position:0% 99%}
-    50%{background-position:100% 2%}
-    100%{background-position:0% 99%}
+    background: #1e9cc1;
 }

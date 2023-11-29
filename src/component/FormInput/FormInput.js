@@ -21,7 +21,7 @@ const FormInput = forwardRef(function FormInput(props, ref) {
                 ) : (
                    <FontAwesomeIcon icon={faXmark} className="FormInput-validation error"/>
                 )}
-                <div>
+                <div className="FormInput-inputWrapper">
                     <input className="FormInput-input"
                            type={obscured && masked ? 'password' : 'text'}
                            onChange={onChange} ref={ref} />
