@@ -1,7 +1,9 @@
 .App {
+    --color-bg: #1e9cc1;
+
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #1e9cc1;
+    background: var(--color-bg);
 }
